@@ -1,0 +1,7 @@
+{
+  "name": "browser-statsd",
+  "version": "0.0.1",
+  "description": "Collect statsd-style metrics in web browser",
+  "main": "index.js",
+  "license": "MIT"
+}
