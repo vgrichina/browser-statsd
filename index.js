@@ -3,24 +3,25 @@ class StatsD {
     options;
     counters = new Map();
     gauges = new Map();
+    history = [];
 
     constructor(options) {
         this.options = options;
     }
 
     inc(key) {
-        if (!counters.has(key)) {
-            counters.set(key, 1);
+        if (!this.counters.has(key)) {
+            this.counters.set(key, 1);
         } else {
-            counters.set(key, counters.get(key) + 1);
+            this.counters.set(key, this.counters.get(key) + 1);
         }
     }
 
     dec(key) {
-        if (!counters.has(key)) {
-            counters.set(key, -1);
+        if (!this.counters.has(key)) {
+            this.counters.set(key, -1);
         } else {
-            counters.set(key, counters.get(key) + 1);
+            this.counters.set(key, this.counters.get(key) - 1);
         }
     }
 

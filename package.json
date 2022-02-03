@@ -3,5 +3,11 @@
   "version": "0.0.1",
   "description": "Collect statsd-style metrics in web browser",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+      "test": "tape test.js"
+  },
+  "devDependencies": {
+    "tape": "^5.5.0"
+  }
 }
